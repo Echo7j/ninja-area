@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  border: 10px solid #ccc;
+  background: black;
+  height: 600px;
+  width: 1000px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+}
+
+.select-arena,
+.select-players {
+  width: 350px;
+  margin: 100px auto;
+  border-radius: 10px;
+  border: 5px solid rgb(114, 114, 114);
+  background: rgba(220,220,220, .8);
+  text-align: center;
+  padding: 10px;
+}
+
+h4 {
+  color: orange;
+  text-shadow: 2px 2px 0px white;
+  font-size: 26px;
+  padding: 10px 0;
+}
+
+.select-arena button {
+  width: 105px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.pic1, .pic2{
+  width: 200px;
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+.pic1{
+  left: 75px;
+}
+
+.pic2{
+ right: 75px;
+}
+ 

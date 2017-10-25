@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="select-arena">
+        <h4>Select Arena</h4>
+
+        <button data-bg-src="beach.jpg">Beach</button>
+        <button data-bg-src="earth.jpg">Planet</button>
+        <button data-bg-src="dojo.jpg">Dojo</button>
+        <button data-bg-src="forest.jpg">Forest</button>
+        <button data-bg-src="matrix.jpg">Matrix</button>
+        <button data-bg-src="snow.jpg">Snow</button>
+      </div>
+      <div class="select-players" style="display: none;">
+          <h4>Select players</h4>
+  
+          <select name="player1" id="player1" data-player=".pic1">
+            <option value="select ninja">select ninja</option>
+            <option data-bg-src="leo.png">leo</option>
+            <option data-bg-src="raphael.png">raphael</option>
+            <option data-bg-src="mikey.png">mikey</option>
+            <option data-bg-src="donny.png">donny</option>
+          </select>
+          <select name="player2" id="player2" data-player=".pic2">
+              <option value="select ninja">select ninja</option>
+              <option data-bg-src="leo.png">leo</option>
+              <option data-bg-src="raphael.png">raphael</option>
+              <option data-bg-src="mikey.png">mikey</option>
+              <option data-bg-src="donny.png">donny</option>
+            </select>
+          </div>
+          <div class="pic1">
+            
+          </div>
+          <div class="pic2">
+              
+          </div>
+        </div>
+      </div>
+      <script>
+      $('button').hover(
+        function(){
+          $('.container').css({
+            'background-image': 'url(' + $(this).data('bg-src') + ')'
+          })
+      });
+      $('button').click(function() {
+        $('.select-arena').hide() 
+        $('.select-players').show()
+      });
+      $('select').on('change', function(e) {
+        var optionSelected = $(this).find("option:selected");
+        var valueSelected = optionSelected.data('bg-src');
+        $($(this).data('player')).css({
+            'background-image': 'url(' +valueSelected + ')'
+          })
+      })
+    </script>
+  </body>
+</html>
